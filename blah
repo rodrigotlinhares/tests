@@ -1,0 +1,15 @@
+#include <cv.h>
+#include <highgui.h>
+
+int main() {
+    cv::VideoCapture capture();
+    cv::Mat frame;
+    char key = 0;
+    cv::namedWindow("", CV_WINDOW_NORMAL);
+
+    while(key != 'q') {
+        capture >> frame;
+        cv::imshow("", frame);
+        key = cv::waitKey(10);
+    }
+}
